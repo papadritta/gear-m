@@ -33,7 +33,7 @@ sudo journalctl -n 100 -f -u gear-node
 ## Find your Node in telemetry [here](https://telemetry.gear-tech.io/#/0x6f022bd353c56b3e441507e1173601fd9dc0fb7547e6a95bbaf9b21f311bcab6) 
 
 ## You need a server?
-- Use the links with referal programm [VULTR](https://www.vultr.com) or [DO](https://www.digitalocean.com)
+- Use the links with referal programm [VULTR](https://www.vultr.com) or <a href="https://www.digitalocean.com/?refcode=87b8b298c106&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge" /></a>
 
 **NOTE!: use a referal link & you will get 100$ to your server provider account**
 
