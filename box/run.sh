@@ -45,6 +45,7 @@ sudo systemctl stop gear-node
 sudo rm -rf /root/.local/share/gear-node
 sudo rm /etc/systemd/system/gear-node.service
 sudo rm /root/gear
+sudo rm /root/gear-node
 sudo rm /usr/local/bin/gear
 
 printCyan "Cloning Gear repo..." && sleep 1
