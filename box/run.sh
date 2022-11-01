@@ -69,7 +69,7 @@ Description=Gear Node
 After=network.target
 [Service]
 User=root
-ExecStart=$(which gear)gear --name=$GEAR_NODENAME --execution wasm --log runtime --listen-addr /ip4/0.0.0.0/tcp/9944 --telemetry-url 'ws://telemetry-backend-shard.gear-tech.io:32001/submit 0'
+ExecStart=$(which gear) --name=$GEAR_NODENAME --execution wasm --log runtime --listen-addr /ip4/0.0.0.0/tcp/9944 --telemetry-url 'ws://telemetry-backend-shard.gear-tech.io:32001/submit 0'
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=10000
