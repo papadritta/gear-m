@@ -84,7 +84,6 @@ printCyan "Check Gear status..." && sleep 1
 if [[ `service gear-node status | grep active` =~ "running" ]]; then
   echo -e "Your gear-node \e[32m. installed and works\e[39m!"
   echo -e "You can check node status by the command \e[7m. sudo systemctl status gear-node\e[0m"
-  echo -e "Press \e[7mQ\e[0m for exit from status menu"
   echo -e "You can check logs by the command \e[7m. sudo journalctl -n 100 -f -u gear-node\e[0m"
 else
   echo -e "Your gear-node \e[31m. was not installed correctly\e[39m, please reinstall."
