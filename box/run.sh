@@ -55,6 +55,7 @@ cd gear
 
 printCyan "Compiling Gear..." && sleep 1
 cargo build -p gear-cli --release
+cd $HOME
 chmod +x $HOME/gear
 mv $HOME/gear $HOME/gear-node
 
