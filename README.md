@@ -15,7 +15,7 @@
 
 - docs & wiki [here](https://wiki.gear-tech.io/docs/)
 
-## Set up your Gear full node (automatic script):
+## 1. Install Gear full node (automatic script):
 >Build from source
 
 >You can setup your Gear full node in minutes by using automated script below
@@ -24,24 +24,32 @@
 ```
 wget -O run.sh https://raw.githubusercontent.com/papadritta/gear-m/main/box/run.sh && chmod +x run.sh && ./run.sh
 ```
-## Check status of your node:
+## 2. Update Gear full node (automatic script):
+>Build from source
+>Script work correctly if you used source script run.sh for installation
+```
+wget -O update.sh https://raw.githubusercontent.com/papadritta/gear-m/main/box/update.sh  && chmod +x update.sh && ./update.sh
+```
+## 3. Additional commands:
+
+- Check status of your node:
 ```
 sudo systemctl status gear-node
 ```
 
-## Check logs of your node:
+- Check logs of your node:
 ```
 sudo journalctl -n 100 -f -u gear-node
 ```
 
-## Find your Node in telemetry [here](https://telemetry.gear-tech.io/#/0x6f022bd353c56b3e441507e1173601fd9dc0fb7547e6a95bbaf9b21f311bcab6) 
+- Find your Node in telemetry [here](https://telemetry.gear-tech.io/#/0x6f022bd353c56b3e441507e1173601fd9dc0fb7547e6a95bbaf9b21f311bcab6) 
 
-## Make a backup your Key (automatic script):
+- Make a backup your Key (automatic script):
 >your key will store in backup folder under path /root/backup/secret_ed25519
 ```
 wget -O backup.sh https://raw.githubusercontent.com/papadritta/gear-m/main/box/backup.sh && chmod +x backup.sh && ./backup.sh
 ```
-## Purge gear chain:
+- Purge gear chain:
 ```
 sudo systemctl stop gear-node
 /root/gear purge-chain -y
