@@ -1,4 +1,4 @@
-# gear
+# gear (Testnet V4)
 <img width="700" alt="Screen Shot 2022-11-01 at 20 54 41" src="https://user-images.githubusercontent.com/90826754/199250127-65b57da8-5005-43b4-8c79-633f770a146a.png">
 
 ## Recommended hardware requirements
