@@ -21,6 +21,16 @@ printLogo
 printCyan "Updating packages..." && sleep 1
 sudo apt update && sudo apt upgrade -y
 
+printCyan "Installing dependencies..." && sleep 1
+apt-get update && apt-get install -y git clang llvm ca-certificates curl build-essential binaryen protobuf-compiler libssl-dev pkg-config libclang-dev cmake jq
+
+printCyan "Installing Rust..." && sleep 1
+sudo curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
+
+printCyan "Installing WASM toolchain..." && sleep 1
+rustup toolchain add nightly
+rustup target add wasm32-unknown-unknown --toolchain nightly
 
 printCyan "Copy Key to backup..." && sleep 1
 cd $HOME
