@@ -29,15 +29,13 @@ chmod +x /root/backup
 sudo systemctl stop gear-node
 cd /root/.local/share/gear-node/chains
 sudo cp gear_staging_testnet_v3/network/secret_ed25519 /root/backup
-
-printCyan "Purging gear Node chain..." && sleep 1
-/root/gear purge-chain -y
+cd $HOME
 
 printCyan "Deleting Node previous installation..." && sleep 1
 sudo rm -rf /root/.local/share/gear-node
-sudo rm /root/gear
-\sudo rm /usr/local/bin/gear
-sudo rm /root/gear-node/*
+#sudo rm /root/gear
+sudo rm /usr/local/bin/gear
+sudo rm -rf /root/gear-node
 
 printCyan "Cloning Gear repo..." && sleep 1
 cd $HOME
@@ -50,10 +48,12 @@ cd $HOME
 chmod +x $HOME/gear
 mv $HOME/gear $HOME/gear-node
 mv ~/gear-node/target/release/gear /usr/local/bin/
+sudo systemctl restart gear-node
 
-printCyan "Copy Key to testnet_v4..." && sleep 1
+printCyan "Restore Key from backup..." && sleep 1
 cd $HOME
-sudo cp /root/backup/gear_staging_testnet_v3/network/secret_ed25519 /root/.local/share/gear-node/chains/gear_staging_testnet_v4/network/secret_ed25519
+sudo systemctl stop gear-node
+sudo cp /root/backup/secret_ed25519 /root/.local/share/gear-node/chains/gear_staging_testnet_v4/network/secret_ed25519
 
 sudo systemctl restart gear-node
 
@@ -65,5 +65,5 @@ if [[ `service gear-node status | grep active` =~ "running" ]]; then
   echo -e "You can check node status by the command \e[7m. sudo systemctl status gear-node\e[0m"
   echo -e "You can check logs by the command \e[7m. sudo journalctl -n 100 -f -u gear-node\e[0m"
 else
-  echo -e "Your gear-node \e[31m. was not updated correctly\e[39m, please restart script again."
+  echo -e "Your gear-node \e[31m. was not updated correctly\e[39m, please install Gear node script"
 fi
