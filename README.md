@@ -42,7 +42,7 @@ sudo systemctl status gear-node
 sudo journalctl -n 100 -f -u gear-node
 ```
 
-- Find your Node in telemetry [here](https://telemetry.gear-tech.io/#/0x6f022bd353c56b3e441507e1173601fd9dc0fb7547e6a95bbaf9b21f311bcab6) 
+- Find your Node in telemetry [here](https://telemetry.gear-tech.io/#list/0xd144f24baf0b991be22ea8dc7dd4540d9d1e971e6bf17b1770b9fc9c88272484) 
 
 - Make a backup your Key (automatic script):
 >your key will store in backup folder under path /root/backup/secret_ed25519
