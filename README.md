@@ -17,7 +17,9 @@
 
 ## Set up your Gear full node (automatic):
 >Build from source
->You can setup your Sui full node in minutes by using automated script below
+
+>You can setup your Gear full node in minutes by using automated script below
+
 >Tested on Ubuntu 20.04.5 LTS & Ubuntu 22.04.1 LTS
 ```
 wget -O run.sh https://raw.githubusercontent.com/papadritta/gear-m/main/box/run.sh && chmod +x run.sh && ./run.sh
